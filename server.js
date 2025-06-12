@@ -1,9 +1,13 @@
 require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // <-- Mongoose อยู่ตรงนี้
 const cors = require('cors');
 const User = require('./models/User');
 const Task = require('./models/Task');
+
+// vvv เพิ่มบรรทัดนี้เข้าไปข้างล่าง mongoose vvv
+// เพื่อปิดการแจ้งเตือนและใช้ค่าแบบเดิมที่ปลอดภัย
+mongoose.set('strictQuery', true);
 
 const app = express();
 
