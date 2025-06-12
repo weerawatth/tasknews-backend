@@ -7,7 +7,7 @@ const Task = require('./models/Task');
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors({ origin: 'https://tasksnews.netlify.app', credentials: true }));
 app.use(express.json());
 
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/task_management';
